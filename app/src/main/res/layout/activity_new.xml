@@ -8,13 +8,13 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/colorAccent"
-    tools:context="praseed.p6c.lifecycle_test.AlertD">
+    tools:context="praseed.p6c.lifecycle_test.New">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hi !! IaM Dialog"
-        android:textColor="#ffff"
-        android:textSize="20sp"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:text="New Activity"
+        android:textSize="25sp"
+        android:textColor="#ffff"/>
 
 </RelativeLayout>

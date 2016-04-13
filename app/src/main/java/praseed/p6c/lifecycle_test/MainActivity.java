@@ -1,5 +1,7 @@
 package praseed.p6c.lifecycle_test;
 
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -92,11 +94,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchDialog(View view) {
-        Toast.makeText(MainActivity.this, "launchDialog", Toast.LENGTH_SHORT).show();
+//        Intent intent = new Intent(this,AlertD.class);
+//        startActivity(intent);
+
+       AlertDialog.Builder builder = new AlertDialog.Builder(this);
+       builder.setMessage("Iam a Dialog").show();
+
     }
 
     public void launchActivity(View view) {
-        Toast.makeText(MainActivity.this, "launchActivity", Toast.LENGTH_SHORT).show();
+        Intent cintent = new Intent(this,New.class);
+        startActivity(cintent);
     }
 
     public void increment(View view) {
