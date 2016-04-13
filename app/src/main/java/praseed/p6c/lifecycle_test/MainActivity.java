@@ -6,17 +6,22 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     public static String TAG="check";
-
+    public TextView Increment_diplay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG,"onCreate");
+        Increment_diplay = (TextView) findViewById(R.id.inc_dispaly);
     }
+
+
 
     @Override
     protected void onStart() {
@@ -24,10 +29,36 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG,"onStart");
     }
 
+
+
     @Override
     protected void onResume() {
         super.onResume();
         Log.d(TAG,"onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG,"onPause");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG,"onRestart");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG,"onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG,"onDestroy");
     }
 
     @Override
@@ -47,12 +78,33 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putCharSequence("inc",Increment_diplay.getText());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        CharSequence value = savedInstanceState.getCharSequence("inc");
+        Increment_diplay.setText(value);
+    }
+
     public void launchDialog(View view) {
+        Toast.makeText(MainActivity.this, "launchDialog", Toast.LENGTH_SHORT).show();
     }
 
     public void launchActivity(View view) {
+        Toast.makeText(MainActivity.this, "launchActivity", Toast.LENGTH_SHORT).show();
     }
 
     public void increment(View view) {
+        String val = (String) Increment_diplay.getText();
+        if(val != null && !val.isEmpty()){
+            int intval = Integer.parseInt(val);
+            intval +=1;
+            Increment_diplay.setText(intval+"");
+        }
     }
 }
