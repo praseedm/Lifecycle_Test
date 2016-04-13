@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Lifecycle_Test</string>
     <string name="exit_app">Exit</string>
+    <string name="initial_val">1</string>
 </resources>

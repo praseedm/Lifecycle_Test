@@ -7,10 +7,47 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorPrimary"
     tools:context="praseed.p6c.lifecycle_test.MainActivity">
 
     <TextView
+        android:id="@+id/inc_dispaly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="@string/initial_val"
+        android:textSize="24sp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_box"
+        android:id="@+id/btn_inc"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:onClick="increment"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_web_asset"
+        android:background="@null"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_frag"
+        android:onClick="launchDialog"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="MainActivity"
+        android:textSize="28sp"
+        android:textColor="#ffffff"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_send"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:id="@+id/btn_newActivity"
+        android:onClick="launchActivity"/>
 </RelativeLayout>
