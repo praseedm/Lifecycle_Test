@@ -5,4 +5,12 @@
         android:id="@+id/exit"
         android:title="@string/exit_app"
         app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/frag_life"
+        android:title="Show Fragment Lifecycle"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/add_fragxml"
+        android:title="Add Fragment in XML"
+        app:showAsAction="ifRoom"/>
 </menu>

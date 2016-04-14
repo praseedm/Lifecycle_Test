@@ -77,8 +77,29 @@ public class MainActivity extends AppCompatActivity {
             finish();
             return true;
         }
+        switch (id){
+            case R.id.exit:
+                finish();
+                return true;
+            case R.id.frag_life:
+                activity_frag();
+                break;
+            case R.id.add_fragxml:
+                launchFrag_Xml();
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
+
+    private void launchFrag_Xml() {
+        Intent intent = new Intent(this,Frag_Xml.class);
+        startActivity(intent);
+    }
+
+    private void activity_frag() {
+            Intent intent = new Intent(this,FragActivity.class);
+            startActivity(intent);
+       }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {

@@ -15,9 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AlertD"
-            android:theme="@style/Animation.AppCompat.Dialog"/>
-        <activity android:name=".New"></activity>
+        <activity
+            android:name=".AlertD"
+            android:theme="@style/Animation.AppCompat.Dialog" />
+        <activity android:name=".New" />
+        <activity android:name=".FragActivity" />
+        <activity android:name=".Frag_Xml"></activity>
     </application>
 
 </manifest>
