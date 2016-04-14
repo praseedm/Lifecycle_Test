@@ -7,10 +7,11 @@
         app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/frag_life"
-        android:title="Show Fragment Lifecycle"
-        app:showAsAction="ifRoom"/>
+        android:title="Show Lifecycle"/>
     <item
         android:id="@+id/add_fragxml"
-        android:title="Add Fragment in XML"
-        app:showAsAction="ifRoom"/>
+        android:title="Add Fragment in XML"/>
+    <item
+        android:id="@+id/add_fragcode"
+        android:title="Add Fragment in CODE"/>
 </menu>

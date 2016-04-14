@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="hai!! Second Fragmrnt"
+        android:text="hai!! Second Fragment"
         android:textSize="20sp"
         android:padding="20dp"
         android:gravity="center" />

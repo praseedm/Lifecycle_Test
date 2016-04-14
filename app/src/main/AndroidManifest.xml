@@ -20,7 +20,8 @@
             android:theme="@style/Animation.AppCompat.Dialog" />
         <activity android:name=".New" />
         <activity android:name=".FragActivity" />
-        <activity android:name=".Frag_Xml"></activity>
+        <activity android:name=".Frag_Xml" />
+        <activity android:name=".Frag_Code"></activity>
     </application>
 
 </manifest>

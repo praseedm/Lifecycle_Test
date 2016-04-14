@@ -87,8 +87,16 @@ public class MainActivity extends AppCompatActivity {
             case R.id.add_fragxml:
                 launchFrag_Xml();
                 break;
+            case R.id.add_fragcode:
+                launchFrag_Code();
+                break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void launchFrag_Code() {
+        Intent intent = new Intent(this,Frag_Code.class);
+        startActivity(intent);
     }
 
     private void launchFrag_Xml() {
